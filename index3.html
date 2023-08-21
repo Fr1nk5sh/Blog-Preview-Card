@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div>
+            <input type="number">
+            <input type="number" name="" id="">
+            <div>
+                <div>add</div>
+                <div>subtract</div>
+                <div>divide</div>
+                <div>multiply</div>
+            </div>
+            <div></div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div>
+            <form>
+                <label>
+                    fast:
+                    <input type="text" name="fast" id="fast" autocapitalize="text">
+                    <textarea name="fast" id="slow" cols="30" rows="10" autocomplete="additional-name" placeholder="address:"></textarea>
+                    <button style="width: 30px; height: 20px; background-color: pink;" onclick="slump()"></button>
+                </label>
+            </form>
+            <form>
+                <label>
+                    hello
+                    <select name="queen" id="queen">
+                        <option value="apple">apple</option>
+                        <option value="avocado">avocado</option>
+                        <option value="banana">banana</option>
+                        <option value="">carrot</option>
+                        <option value="">eggplant</option>
+                    </select>
+                    <select name="joker" id="joker">
+                        <option value="apple">apple</option>
+                        <option value="avocado">avocado</option>
+                        <option value="banana">banana</option>
+                        <option value="carrot">carrot</option>
+                        <option value="eggplant">eggplant</option>  
+                    </select>
+                    <button style="width: 30px; height: 20px; background-color: palegreen;" onclick="sap()">click</button>
+                </label>
+            </form>
+        </div>
+        <script type="text/javascript">
+            function slump() {
+                var value = document.getElementById("slow").value
+                alert(value)
+            }
+            function sap() {
+                var options = document.getElementById("joker").options;
+                var option_count = document.getElementById("joker").options.length;
+                var value = [];
+
+                for(var i = 0; i < option_count; i++) {
+                    if(options[i].selected) {
+                        value.push(options[i].value);
+                    }
+                }
+                alert(JSON.stringify(value))
+            }
+        </script>
+    </body>
+</html>

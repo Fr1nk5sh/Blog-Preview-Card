@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>how to use form</title>
+        <style type="text/css">
+            label {
+                border: 1px solid green;
+                background-color: darkgreen;
+                font-style: italic;
+                border-radius: 5px;
+                color: whitesmoke;
+            }
+            button {
+                width: 30px;
+                height: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <label for="happy">collins</label>
+            <input type="text" id="happy">
+            <button onclick="getValue1()"></button>
+            <br>
+            <label for="sad">susan</label>
+            <input type="checkbox" id="sad">
+            <button onclick="getValue2()"></button>
+            <br>
+            <label for="normal">abigail</label>    
+            <input type="color" id="normal">
+            <button onclick="getValue3()"></button>
+            <br>
+            <label for="playful">jeff</label>
+            <input type="date" id="playful">
+            <button onclick="getValue4()"></button>
+            <br>
+            <label for="thoughtful">kelly</label>
+            <input type="datetime-local" id="thoughtful">
+            <button onclick="getValue5()"></button>
+            <br>
+            <label for="dreamy">bruce</label>
+            <input type="password" id="dreamy">
+            <button onclick="getValue6()"></button>
+            <br>
+            <label for="sleepy">sydney</label>
+            <input type="file" id="demo" onchange="readFile()">
+            <img src="" alt="the image will be shown here" id="result">
+            <br>
+            <label for="guy">male</label>
+            <input type="radio" id="male" name="gender" value="magnam">
+            <br>
+            <label for="lady">female</label>
+            <input type="radio" id="lady" name="gender">
+            <br>
+            <button onclick="getValue7"></button>
+        </form>
+        <form>
+            <textarea name="jot" id="text" cols="30" rows="10"></textarea>
+            <br>
+            <button onclick="getValue8()"></button>
+        </form>
+    </body>
+    <script type="text/javascript">
+        let lii = document.getElementById("happy")
+        function getValue1() {
+            alert(lii.value)
+        }
+        function getValue2() {
+            alert(document.getElementById("sad").checked)
+        }
+        function getValue3() {
+            alert(document.getElementById("normal").value)
+        }
+        function getValue4() {
+            alert(document.getElementById("playful").value) 
+        }
+        function getValue5() {
+            alert(document.getElementById("thoughtful").value) 
+        }
+        function getValue6() {
+            alert(document.getElementById("dreamy").value) 
+        }
+        function readFile() {
+            var reader = new FileReader();
+            var file = document.getElementById("demo").file[0];
+
+            reader.onload = function(e) {
+                document.getElementById("result").src = e.target.result;
+            }
+            reader.readAsDataURL(file);
+        } 
+        function getValue7() {
+            var radios = document.getElementsByName('gender');
+            var number_of_radios = radios.length;
+            for(var i = 0; i < number_of_radios; i++) {
+                if(radios[i].checked){
+                    alert(radios[i].value);
+                }
+            }
+        }
+        function getValue8(){
+            alert(document.getElementById("text").value)
+        }
+    </script>
+</html>
