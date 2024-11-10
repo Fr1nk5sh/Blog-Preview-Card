@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+
+    /* || RESET */
+
+* {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+}
+
+    /* || VARIABLES */
+
+:root {
+    /* COLORS */
+
+    --Gray--950: hsl(0, 0%, 7%);
+    --Gray-500: hsl(0, 0%, 42%);
+    --White: hsl(0, 0%, 100%);
+    --Yellow: hsl(47, 88%, 63%);
+
+    /* FONT-WEIGHT */
+
+    --FONT-WEIGHT-1: 500;
+    --FONT-WEIGHT-2: 800;
+}
+
+body {
+    align-items: center;
+    background-color: var(--Yellow);
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: 'Figtree';
+    font-size: 16px;
+    justify-content: center;
+    line-height: 1.5rem;
+    min-height: 100vh;
+}
+
+main {
+    background-color: var(--White);
+    border-radius: 1.5rem;
+    border: 1px solid var(--Gray--950);
+    box-shadow: 0.6rem 0.6rem black;
+    font-weight: var(--FONT-WEIGHT-1);
+    margin-bottom: 3rem;
+    max-width: 27rem;
+    padding: 1.7rem;
+}
+
+svg {
+    height: 100%;
+    width: 100%;
+}
+
+.svg-img {
+    border-radius: 1rem;
+    display: block;
+    min-height: 16rem;
+    object-fit: cover;
+    width: 100%;
+}
+
+section {
+    margin: 1rem 0rem;
+}
+
+.status {
+    background-color: var(--Yellow);
+    border-radius: 0.4rem;
+    display: inline-block;
+    font-weight: var(--FONT-WEIGHT-2);
+    margin: 0.8rem 0rem;
+    padding: 0.3rem 1rem;
+    text-align: center;
+}
+
+.date {
+    color: var(--Gray--950);
+}
+
+.heading {
+    font-size: 1.6rem;
+    font-weight: var(--FONT-WEIGHT-2);
+    margin: 1.5rem 0rem;
+}
+
+.content {
+    color: var(--Gray-500);
+    font-size: 1.1rem;
+}
+
+.avatar-div {
+    align-items: center;
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: var(--FONT-WEIGHT-2);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.avatar-img {
+    width: 2.8rem;
+}
