@@ -36,7 +36,7 @@ body {
     min-height: 100vh;
 }
 
-main {
+.card {
     background-color: var(--White);
     border-radius: 1.5rem;
     border: 1px solid var(--Gray--950);
@@ -47,15 +47,9 @@ main {
     padding: 1.7rem;
 }
 
-svg {
-    height: 100%;
-    width: 100%;
-}
-
-.svg-img {
+.img-container {
     border-radius: 1rem;
     display: block;
-    min-height: 16rem;
     object-fit: cover;
     width: 100%;
 }
@@ -81,7 +75,7 @@ section {
 .heading {
     font-size: 1.6rem;
     font-weight: var(--FONT-WEIGHT-2);
-    margin: 1.5rem 0rem;
+    margin: 1.2rem 0rem;
 }
 
 .content {
@@ -92,12 +86,12 @@ section {
 .avatar-div {
     align-items: center;
     display: flex;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: var(--FONT-WEIGHT-2);
     gap: 1rem;
     margin-top: 2rem;
 }
 
 .avatar-img {
-    width: 2.8rem;
+    width: 2.5rem;
 }
